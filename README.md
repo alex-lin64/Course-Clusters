@@ -22,14 +22,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center">Book Of Ps</h3>
+  <h3 align="center">Course Clusters</h3>
 
   <p align="center">
-    Digital Recipe Repository Built on a Custom Hypertext Framework
-    <br />
-    <a href="https://youtu.be/06mUj7hBhy0"><strong>View Demo »</strong></a>
-    <br />
-    <br />
+    Distributed Approach to University Course Search and Registration
+
   </p>
 </div>
 
@@ -43,7 +40,6 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -53,26 +49,12 @@
 
 ## About The Project
 
- <img src="images/login.PNG" alt="Logo">
+Course Cluster a distributed and scalable course registration system developed for CS1380 at Brown University. CourseCluster is designed to manage large volumes of student and course data, ensuring scalability and data consistency across nodes. We deployed our system to Elastic Compute Cloud (EC2) instances on Amazon Web Services (AWS) to enhance performance and stability across multiple nodes, and connected the system to a web interface.
 
-The Book of Ps (i.e. Recipes) is a collaborative hypertext framework-based recipe repository. The site supports user login, authentication, and persistent user data storage via MongoDB. Users use our hypertext nodes to store recipes, create links to other nodes, and share their nodes with others (a la style of Google Docs). The key feature of the Book of Ps is the persistence of links between text, images, and nodes themselves across the whole system and user space. The website is deployed via Vercel and built with React, Typescript, and MongoDB.
+View the paper [here](course-cluster-paper.pdf) and the poster [here](course-cluster-poster.pdf)
 
 > [!NOTE]
 > The source code is not uploaded to comply with Brown's Academic Code.
-
-> [!IMPORTANT]
-> The backend might not be up due to inactivity timeouts on free tier Render (backend deployment service).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-- [![Next][Next.js]][Next-url]
-- [![React][React.js]][React-url]
-- [![MongoDB][MongoDB]][MongoDB-url]
-- [![Typescript][Typescript]][Typescript-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -80,7 +62,10 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ## Usage
 
-Live site is available [here](https://bookofrecipes.vercel.app/login).
+> [!IMPORTANT]
+> The deployed live site will most likely be down due to cost of running the many EC2 instances necessary for distribution.
+
+Live site is available [here](http://52.53.161.207).
 
 <!-- CONTACT -->
 
@@ -94,26 +79,15 @@ Alex Lin - alex_lin@brown.edu
 
 ## Acknowledgments
 
-Book of Ps the final project for [CSCI 1951V](https://cs1951v-2023.vercel.app/).
+Book of Ps the final project for [CSCI 1380](https://cs.brown.edu/courses/csci1380/).
 
 ### Contributors
 
 - [Alex Lin](https://github.com/alex-lin64)
-- [Steven Liao](https://github.com/sliao2025)
-- [Paul Jeong](https://github.com/pauljeong333).
+- [Ethan Williams](https://github.com/EtomicBomb)
+- [Ben Bachmann](https://github.com/BenBachmann).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[MongoDB]: https://img.shields.io/badge/-MongoDB-05122A?style=flat&logo=mongodb
-[MongoDB-url]: https://www.mongodb.com/
-[Typescript]: https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square
-[Typescript-url]: https://www.typescriptlang.org/
-
