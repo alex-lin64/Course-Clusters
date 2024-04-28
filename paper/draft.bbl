@@ -1,0 +1,87 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{4}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{{Arul John}}{{Arul John}}{nd}]%
+        {babynames}
+\bibfield{author}{\bibinfo{person}{{Arul John}}.}
+  \bibinfo{year}{n.d.}\natexlab{}.
+\newblock \bibinfo{title}{{Popular Baby Names}}.
+\newblock \bibinfo{howpublished}{{GitHub repository}}.
+\newblock
+\urldef\tempurl%
+\url{{https://github.com/aruljohn/popular-baby-names}}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Dean and Ghemawat}{Dean and Ghemawat}{2008}]%
+        {mapreduce}
+\bibfield{author}{\bibinfo{person}{Jeffrey Dean} {and} \bibinfo{person}{Sanjay
+  Ghemawat}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{MapReduce: Simplified Data Processing on Large
+  Clusters}. In \bibinfo{booktitle}{\emph{Proceedings of the 6th Conference on
+  Symposium on Operating Systems Design \& Implementation - Volume 6}}.
+  \bibinfo{pages}{10}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Hamilton}{Hamilton}{2007}]%
+        {deploying}
+\bibfield{author}{\bibinfo{person}{James Hamilton}.}
+  \bibinfo{year}{2007}\natexlab{}.
+\newblock \showarticletitle{On Designing and Deploying Internet-Scale
+  Services}.
+\newblock \bibinfo{journal}{\emph{Windows Live Services Platform}}
+  (\bibinfo{year}{2007}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Page and Brin}{Page and Brin}{1998}]%
+        {google}
+\bibfield{author}{\bibinfo{person}{Larry Page} {and} \bibinfo{person}{Sergey
+  Brin}.} \bibinfo{year}{1998}\natexlab{}.
+\newblock \showarticletitle{The Anatomy of a Large-Scale Hypertextual Web
+  Search Engine}.
+\newblock \bibinfo{journal}{\emph{Computer Networks and ISDN Systems}}
+  \bibinfo{volume}{30}, \bibinfo{number}{1-7} (\bibinfo{year}{1998}),
+  \bibinfo{pages}{107--117}.
+\newblock
+
+
+\end{thebibliography}

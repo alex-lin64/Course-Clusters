@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>CourseCluster</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>CourseCluster</h1>
+
+    <h2>Registration</h2>
+
+    <form hx-post="/register" hx-target="find output">
+        <div>
+            <label for="token">Student</label>
+            <input id="token" name="token" type="text" placeholder="B10">
+        </div>
+        <div>
+            <label for="code">Course code</label>
+            <input id="code" name="code" type="text" placeholder="CSCI 1380">
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+        <output></output>
+    </form>
+
+    <h2>Course Search</h2>
+
+    <form hx-post="/search" hx-target="find output">
+        <div>
+            <label for="query">Search course title, description</label>
+            <input id="query" name="query" type="text" placeholder="system">
+            <input type="submit" value="Search">
+        </div>
+        <div>
+            <label for"course">Info about a specific course</label>
+            <input id="course" name="course" placeholder="CSCI 1380" type="text">
+            <input type="submit" value="Search">
+        </div>
+        <div>
+            <label for="department">List all courses in a department</label>
+            <input id="department" name="department" type="text" placeholder="CSCI">
+            <input type="submit" value="Search">
+        </div>
+
+        <output></output>
+    </form>
+
+</body>
+
+

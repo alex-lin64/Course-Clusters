@@ -1,0 +1,47 @@
+
+# if you run this you may incur charges
+
+# create the two security groups
+aws ec2 create-security-group --group-name group-internal-1380 --description "internal 1380"
+aws ec2 create-security-group --group-name group-client-1380   --description "client 1380"
+
+# get their actual ids
+
+SG_CLIENT=$(aws ec2 describe-security-groups --group-names     group-client-1380 --output json | jq -r .SecurityGroups[0].GroupId)
+SG_INTERNAL=$(aws ec2 describe-security-groups --group-names group-internal-1380 --output json | jq -r .SecurityGroups[0].GroupId)
+
+# internal group
+aws ec2 authorize-security-group-ingress --group-id "$SG_INTERNAL" --protocol tcp --port 22   --cidr 0.0.0.0/0
+aws ec2 authorize-security-group-ingress --group-id "$SG_INTERNAL" --protocol tcp --port 8080 --source-group "$SG_INTERNAL"
+aws ec2 authorize-security-group-ingress --group-id "$SG_INTERNAL" --protocol tcp --port 8080 --source-group "$SG_CLIENT"
+
+# client group
+aws ec2 authorize-security-group-ingress --group-id "$SG_CLIENT" --protocol tcp --port 22   --cidr 0.0.0.0/0
+aws ec2 authorize-security-group-ingress --group-id "$SG_CLIENT" --protocol tcp --port 8080 --source-group "$SG_CLIENT"
+aws ec2 authorize-security-group-ingress --group-id "$SG_CLIENT" --protocol tcp --port 8080 --source-group "$SG_INTERNAL"
+aws ec2 authorize-security-group-ingress --group-id "$SG_CLIENT" --protocol tcp --port 80 --cidr 0.0.0.0/0 
+# key pair
+aws ec2 create-key-pair \
+    --key-name keypair-1380 \
+    --key-type rsa \
+    --key-format pem \
+    --query "KeyMaterial" \
+    --output text > keypair-1380.pem \
+
+# ami-0aafdae616ee7c9b7
+
+# client
+aws ec2 run-instances \
+    --image-id ami-058bd2d568351da34 \
+    --count 1 \
+    --instance-type t2.micro \
+    --key-name keypair-1380 \
+    --security-group-ids $SG_CLIENT \
+
+# internal
+aws ec2 run-instances \
+    --image-id ami-058bd2d568351da34 \
+    --count 1 \
+    --instance-type t2.micro \
+    --key-name keypair-1380 \
+    --security-group-ids "$SG_INTERNAL" \

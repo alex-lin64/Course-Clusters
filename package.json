@@ -1,0 +1,38 @@
+{
+  "name": "distribution",
+  "version": "0.0.1",
+  "description": "A library for building distributed systems.",
+  "main": "distribution.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "eslint": "^8.55.0",
+    "eslint-config-google": "^0.14.0",
+    "husky": "^9.0.7",
+    "jest": "^27.4.7",
+    "prettier": "3.2.5"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint --ignore-path .gitignore .",
+    "prepare": "husky"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^12.0.1",
+    "html-to-text": "^9.0.5",
+    "koa": "^2.15.3",
+    "koa-body": "^6.0.1",
+    "koa-static": "^5.0.0",
+    "natural": "^7.0.5",
+    "node-fetch": "^3.3.2",
+    "yargs": "^17.7.2"
+  }
+}
