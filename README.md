@@ -80,6 +80,17 @@ Live site is available [here](http://52.53.161.207).
 
 The distributed API is built on top of a core set of node functionality.
 
+| Service   | Description | Methods |
+| ------------- | ------------- | ------------- |
+| comm  | A message communication interface  | send  |
+| groups  | A mapping from group names to nodes  | get, put, add, rem, del  |
+| routes  | A mapping from names to functions  | get, put  |
+| status  | Information about the current group  | 	get, stop, spawn  |
+| gossip  | Status and information dissemination  | recv, send, at, del  |
+| mem  | 	An ephemeral (in-memory) store  | get, put, del, reconf  |
+| store  | A persistent store  | get, put, del, reconf  |
+| mr  | 	A MapReduce implementation  | exec  |
+
 
 Furthermore, an API for course registration and course search was built on top of the distributed API.
 
