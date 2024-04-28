@@ -22,7 +22,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center">Course Clusters</h3>
+  <h1 align="center">Course Clusters</h3>
 
   <p align="center">
     Distributed Approach to University Course Search and Registration
