@@ -53,9 +53,6 @@ Course Cluster a distributed and scalable course registration system developed f
 
 View the paper [here](course-cluster-paper.pdf) and the poster [here](course-cluster-poster.pdf)
 
-> [!NOTE]
-> The source code is not uploaded to comply with Brown's Academic Code.
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
