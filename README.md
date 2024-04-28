@@ -53,7 +53,12 @@
 
 Course Cluster a distributed and scalable course registration system developed for CS1380 at Brown University. CourseCluster is designed to manage large volumes of student and course data, ensuring scalability and data consistency across nodes. We deployed our system to Elastic Compute Cloud (EC2) instances on Amazon Web Services (AWS) to enhance performance and stability across multiple nodes, and connected the system to a web interface.  The majority of the system was developed through NodeJS and Javascript.
 
-View the paper [here](course-cluster-paper.pdf) and the poster [here](course-cluster-poster.pdf)
+View the paper [here](course-cluster-paper.pdf), the poster [here](course-cluster-poster.pdf), and the performance metrics below
+
+- [Query Latency Spectrum](QueryLatencySpectrum.pdf)
+- [Query Throughput (query_s) (mean 100 trials)](QueryThroughput.pdf)
+- [Registration Latency Spectrum](RegistrationLatencySpectrum.pdf)
+- [Registration Throughput (registration_s) (mean 1000 trials)](RegistrationThroughput.pdf)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
